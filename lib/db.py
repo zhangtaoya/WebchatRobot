@@ -1,8 +1,7 @@
-import lib.mongo
-import lib.motordb
+import mongo
+import motordb
 import redis
 from config import config
-import log
 
 
 def get_redis(db=0):
@@ -12,4 +11,12 @@ def get_redis(db=0):
 
 
 def get_col_test_my():
-    return lib.motordb.mongo_collection('test', 'my', config.DB_HOST, config.DB_PORT)
+    return motordb.mongo_collection('test', 'my', config.DB_HOST, config.DB_PORT)
+
+
+def get_col_wechat_account():
+    return motordb.mongo_collection('wechat_robot', 'wechat_account', config.DB_HOST, config.DB_PORT)
+
+
+def get_col_wechat_account_sync():
+    return mongo.mongo_collection('wechat_robot', 'wechat_account', config.DB_HOST, config.DB_PORT)
