@@ -22,6 +22,7 @@ sys.setdefaultencoding('utf8')
 handlers = [
     (r"/", IndexHandler),
     (r"/lsj", LSJHandler),
+    (r"/wechat_login", WechatLoginHandler),
 ]
 
 template_path = os.path.join(os.path.dirname(__file__),"template")

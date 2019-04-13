@@ -24,7 +24,7 @@ class LSJHandler(BaseHandler):
         self.set_header("Content-type", "image/png")
 
 
-class NewLoginHandler(BaseHandler):
+class WechatLoginHandler(BaseHandler):
     def get(self):
         ret = yield wechat_service.new_user()
         if ret.get('ret') != 1:
